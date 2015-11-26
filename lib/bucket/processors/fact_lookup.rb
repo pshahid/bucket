@@ -9,6 +9,7 @@ module Bucket
           text: fact.result,
           trigger: message.text,
           verb: fact.verb,
+          speaker: message.user_name,
         )
       end
     end

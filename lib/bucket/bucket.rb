@@ -59,6 +59,7 @@ module Bucket
       [
         ::Bucket::Postprocessors::Inventory.new,
         ::Bucket::Postprocessors::PerformAction.new,
+        ::Bucket::Postprocessors::ReplaceWho.new,
         ::Bucket::Postprocessors::HtmlEncode.new,
       ]
     end
