@@ -4,9 +4,9 @@ class Message
   attr_accessor :token, :team_id, :channel_id, :channel_name, :timestamp,
                 :user_id, :user_name, :text, :trigger_word, :addressed
 
-  validates :token, presence: true, inclusion: {
-    in: [Rails.application.secrets[:slack_triggers_token]]
-  }
+  # validates :token, presence: true, inclusion: {
+  # in: [Rails.application.secrets[:slack_triggers_token]]
+  # }
 
   def initialize(options = {})
     options = options
