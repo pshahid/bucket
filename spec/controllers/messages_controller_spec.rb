@@ -7,7 +7,7 @@ describe MessagesController do
     let(:valid) { false }
 
     before do
-      allow(Message).to receive(:new) { message }
+      allow(SlackMessage).to receive(:new) { message }
     end
 
     it 'permits only text, user_name, and token' do
@@ -18,7 +18,7 @@ describe MessagesController do
         extra: 'param'
       }
 
-      expect(Message).to have_received(:new).with(
+      expect(SlackMessage).to have_received(:new).with(
         ActionController::Parameters.new(
           token: '123',
           text: 'alpha',

@@ -1,11 +1,11 @@
 class MessagesController < ApplicationController
   def receive
-    message = Message.new(receive_params(params))
+    slack_message = SlackMessage.new(receive_params(params))
 
-    return head :bad_request unless message.valid?
+    return head :bad_request unless slack_message.valid?
 
     bucket = ::Bucket::Bucket.new
-    message_response = bucket.process(message)
+    message_response = bucket.process(slack_message)
 
     if message_response.present?
       render json: { text: message_response }
