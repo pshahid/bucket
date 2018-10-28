@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 end
 
 Rails.application.routes.draw do
-  get 'healthz', to: 'health#healthz'
+  get 'healthz'
 end

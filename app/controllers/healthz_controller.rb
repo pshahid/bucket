@@ -1,4 +1,4 @@
-class MessagesController < ApplicationController
+class HealthzController < ApplicationController
     def receive
       render json: {}
     end
