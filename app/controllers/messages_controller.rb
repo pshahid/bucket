@@ -14,6 +14,9 @@ class MessagesController < ApplicationController
     end
   end
 
+  def health
+    render json: {}
+  end
   private
 
   def receive_params(params)
